@@ -2,11 +2,8 @@ FROM node:20-bookworm
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    vim \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
+COPY . .
 
-EXPOSE 3000
+EXPOSE 5173
 
 CMD ["sleep", "infinity"]
